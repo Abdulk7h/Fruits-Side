@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+  </head>
+  <body>
+    <div class="main">
+      <div class="nav">
+        <h4>Fruits</h4>
+        <div class="btn">
+          <button class="close">Close</button>
+        </div>
+      </div>
+      <hr/>
+      <div class="main1">
+
+        </div>
+    </div>
+    <button class="show">Show Products</button>
+
+    <div class="Your-card">
+      <div class="Card-details"> 
+      <h4>Your Card</h4>
+      <h5>Total-$ <span class="price">0</span></h5>
+      </div>
+      <hr>
+      <div class="card1">
+        
+      </div>
+        </div>
+  
+
+    <script src="script.js"></script>
+  </body>
+</html>
