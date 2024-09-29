@@ -1,0 +1,159 @@
+var arr = [
+    {
+      name: "Orange",
+      qty: 1,
+      status: "fresh",
+      offer: false,
+      added: false,
+      price: 100,
+      image:"https://images.unsplash.com/photo-1552010099-5dc86fcfaa38?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      name: "Mango",
+      qty: 1,
+      status: "fresh",
+      offer: false,
+      added: false,
+      price: 150,
+      image:"https://images.unsplash.com/photo-1582655299221-2b6bff351df0?q=80&w=1781&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      name: "Grapes",
+      qty: 1,
+      status: "fresh",
+      offer: false,
+      added: false,
+      price: 80,
+      image:"https://images.unsplash.com/photo-1603186741833-4a7cf699a8eb?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      name: "Apple",
+      qty: 1,
+      status: "fresh",
+      offer: false,
+      added: false,
+      price: 250,
+      image:"https://images.unsplash.com/photo-1587092658848-828238691286?q=80&w=2013&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+    {
+      name: "Cherry",
+      qty: 1,
+      status: "fresh",
+      offer: false,
+      added: false,
+      price: 300,
+      image:"https://images.unsplash.com/photo-1559181567-c3190ca9959b?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+  ];
+  
+  var main1 = document.querySelector(".main1");
+  var card =  document.querySelector(".card1");
+  var pricee = document.querySelector(".price");
+  
+  function bringpods() {
+    var show = document.querySelector(".show");
+    var close = document.querySelector(".close");
+    var main = document.querySelector(".main");
+  
+    document.querySelector(".show");
+    show.addEventListener("click", function() {
+      main.style.top = 0;
+    });
+  
+    document.querySelector(".close");
+    close.addEventListener("click", function() {
+      main.style.top = "-350px";
+    });
+};
+  
+function showProds(){
+  
+  var clutter = "";
+  
+  arr.forEach(function(prods,iodex){
+        clutter += `<div class="box">
+        <div class="box2">
+          <img
+            src="${prods.image}"
+            alt=""
+          />
+        </div>
+        <div class="Fruits-details">
+          <h5>${prods.name}</h5>
+          <h3>$ ${prods.price}</h3>
+          <button data-value="${iodex}" class="add">Add</button>
+        </div>
+      </div>`
+      
+  
+  main1.innerHTML = clutter;
+
+  });
+  
+};
+  
+function showCard() {
+    var added = arr.filter(function (elem) {
+      return elem.added === true;
+    });
+  
+    var clutter = "";
+    var price = 0;
+  
+    added.forEach(function (elem,idx) {
+      price += elem.price;
+  
+      clutter += `<div class="card">
+      <div class="box3">
+        <img src="${elem.image}" alt="">
+      </div>
+      <div class="Product-details">
+        <h4>${elem.name}</h4>
+        <h5>${elem.status}</h5>
+        <h6>$ ${elem.price}</h6>
+      </div>
+      <div class="quantity">
+        <h5>quantity</h5>
+        <div>${elem.qty}</div>
+      </div>
+      <div class="Color">
+        <h5>Offer</h5>
+        <div>${elem.offer}</div>
+      </div>
+      <div class="Total-No">
+        <h5>$ ${elem.price}</h5>
+        <div><i class="ri-close-line"  id="${idx}"></i></div>
+      </div>
+      </div>`;
+    });
+  
+    pricee.textContent = price;
+    card.innerHTML = clutter;
+};
+  
+function addToCart(){
+  
+   main1.addEventListener("click",function(dets){   
+    if(dets.target.classList.contains('add')){
+      arr[dets.target.dataset.value].added = true;
+      showCard();
+    };
+  
+   });
+  
+};
+
+function cancel(){
+
+card.addEventListener("click",function(dets){
+    arr[dets.target.id].added = false;
+    showCard();
+});
+  
+}; 
+
+bringpods();
+showProds();
+showCard();
+addToCart();
+cancel();
