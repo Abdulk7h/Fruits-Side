@@ -1,0 +1,210 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+.main{
+    height: 300px;
+    width: 100%;
+    background-color: rgba(121, 120, 120, 0.673);
+    top: -350px;
+    position: absolute;
+    transition: all ease 1s;
+    
+}
+.main1{
+    display: flex;
+}
+.main h4{
+    color: white;
+    padding: 40px 25px 10px 25px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    margin: 40px 25px 10px 25px;
+}
+.btn .close{
+    padding: 4px 10px;
+    background-color: rgb(214, 2, 2);
+    color: white;
+    font-size: 12px;
+    border: none;
+    border-radius: 5px;
+}
+.box{
+    z-index: 9;
+    height: 180px;
+    width: 120px;
+    background-color: rgb(108, 106, 106);
+    margin: 14px 20px 0px 20px;
+    border-radius: 5px;
+}
+.box2{
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    margin: 7px 7px;
+}
+.box2 img{
+    height: 65px;
+    width: 60px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+.Fruits-details{
+    padding: 86px 7px;
+}
+.Fruits-details h5{
+    color: white;
+    font-size: 15px;
+    font-weight: 550;
+}
+.Fruits-details h3{
+    color: white;
+    font-size: 14px;
+    font-weight: 550;
+    padding: 5px 0px 10px 0px;
+}
+.Fruits-details button{
+    padding: 4px 9px;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+}
+.show{
+    padding: 10px 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    margin: 10px 10px;
+}
+
+.Your-card{
+    height: 300px;
+    width: 100%;
+    margin-top: 40px;
+}
+.Card-details{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px 5px 15px;
+}
+.Card-details h4{
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+.Card-details h5{
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+}
+hr{
+    opacity: 0.8;
+}
+.card{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 15px;
+}
+.box3{
+    height: 100px;
+    width: 100px;
+}
+.box3 img{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+   border-radius: 5px;
+}
+.Product-details h4{
+    font-size: 25px;
+    color: white;
+    font-weight: 550;
+    padding-bottom: 9px;
+}
+.Product-details h5{
+    color: white;
+    font-weight: 400;
+    padding-bottom: 9px;
+}
+.Product-details h6{
+    color: white;
+    font-weight: 500;
+    opacity: 0.8;
+}
+.quantity{
+    display: flex;
+    gap: 10px;
+}
+.quantity h5{
+    font-size: 14px;
+    font-weight: 100px;
+    color: white;
+}
+.quantity div{
+    height: 22px;
+    width: 27px;
+    border: 2px solid white;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+
+.Color{
+    display: flex;
+    gap: 10px;
+}
+.Color h5{
+    font-size: 14px;
+    font-weight: 100px;
+    color: white;
+    padding-top: 5px;
+}
+.Color div{
+    height: 28px;
+    width: 53px;
+    border: 2px solid white;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    padding-top: 2px;
+}
+.Total-No{
+    display: flex;
+    gap: 20px;
+}
+.Total-No h5{
+    color: white;
+    padding-top: 7px;
+}
+.Total-No div{
+    height: 27px;
+    width: 27px;
+    background-color: gray;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Total-No i{
+    color: white;
+    font-weight: 500;
+}
